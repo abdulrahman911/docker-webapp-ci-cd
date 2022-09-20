@@ -14,6 +14,7 @@ WORKDIR /var/www/html/
 RUN unzip biznews.zip
 RUN cp -rvf free-news-website-template/* .
 RUN rm -rf free-news-website-template biznews.zip
+RUN echo "My test webfile" > test.html
 
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
