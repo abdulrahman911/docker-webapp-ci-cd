@@ -1,7 +1,8 @@
 FROM centos:latest
 MAINTAINER rahmanuk91@gmail.com
-RUN yum install -y httpd \
-zip\
+
+RUN yum update -y && yum install httpd httpd-tools -y
+RUN yum install -y zip\
 unzip
 
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page283/potoub.zip /var/www/html/
